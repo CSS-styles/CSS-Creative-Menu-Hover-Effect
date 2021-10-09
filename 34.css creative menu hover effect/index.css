@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: #262626FF;
+}
+div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 100px;
+	width: 100px;
+	font-size: 50px;
+	margin: 100px;
+	cursor: pointer;
+}
+div::after{
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	font-size: 25px;
+	font-family: cursive;
+	color: white;
+	opacity: 0;
+}
+.home::after{
+	content: 'Home';
+}
+.about::after{
+	content: 'About';
+}
+.account::after{
+	content: 'Account';
+}
+.contact::after{
+	content: 'Contact';
+}
+div:hover{
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	border-radius: 50%;
+	box-shadow: 1px 1px 60px black;
+	color: white;
+}
+div:hover::after{
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	left: 20%;
+	opacity: 1;
+}
